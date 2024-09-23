@@ -42,11 +42,11 @@ export default function Header() {
                         </svg>
                     </button>
 
-                    {/* Navigation Links with smooth animation */}
+                    {/* Navigation Links */}
                     <div
-                        className={`transition-max-height duration-500 ease-in-out overflow-hidden lg:flex lg:w-auto lg:order-1 ${
+                        className={`transition-max-height duration-500 ease-in-out overflow-hidden lg:overflow-visible lg:flex lg:w-auto lg:order-1 ${
                             isOpen ? "max-h-96" : "max-h-0"
-                        } w-full`}
+                        } w-full lg:max-h-none`} // lg:max-h-none ensures it’s not restricted on larger screens
                         id="mobile-menu"
                     >
                         <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
@@ -57,7 +57,7 @@ export default function Header() {
                                         `${isActive ? "text-orange-700" : "text-gray-700"}
                                         block py-2 pr-4 pl-3 duration-200 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
                                     }
-                                    onClick={toggleMenu} // Close the menu when an item is clicked
+                                    onClick={toggleMenu} // Close the menu when an item is clicked (for mobile)
                                 >
                                     Home
                                 </NavLink>
@@ -69,7 +69,7 @@ export default function Header() {
                                         `${isActive ? "text-orange-700" : "text-gray-700"}
                                         block py-2 pr-4 pl-3 duration-200 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
                                     }
-                                    onClick={toggleMenu} // Close the menu when an item is clicked
+                                    onClick={toggleMenu} // Close the menu when an item is clicked (for mobile)
                                 >
                                     About
                                 </NavLink>
@@ -81,7 +81,7 @@ export default function Header() {
                                         `${isActive ? "text-orange-700" : "text-gray-700"}
                                         block py-2 pr-4 pl-3 duration-200 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
                                     }
-                                    onClick={toggleMenu} // Close the menu when an item is clicked
+                                    onClick={toggleMenu} // Close the menu when an item is clicked (for mobile)
                                 >
                                     Contact
                                 </NavLink>
